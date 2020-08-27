@@ -6,8 +6,13 @@ class Post < ApplicationRecord
   # Action text from Rails 6
   has_rich_text :body
 
-  validates :title, length: {minimum:5, maximum:100}
-  validates :body, length: {minimum:25, maximum: 255}
+  validates :title, length: {minimum:5}
+  validates :body, length: {minimum:10}
+
+  self.per_page = 5
+  
+  extend FriendlyId
+  friendly_id :title, use: :slugged
 
   def optimized_image(image,x,y)
     return image.variant(resize_to_fill: [x,y]).processed
