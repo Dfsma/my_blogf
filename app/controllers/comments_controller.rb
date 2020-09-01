@@ -24,6 +24,7 @@ def update
 end
 
 def destroy
+    @comment.destroy
 end
 
 def history
