@@ -7,6 +7,7 @@
     box-shadow: 6px 9px 5px 1px rgba(0,0,0,0.33);
     margin: 1em;
     padding-bottom: 1em;
+    width: 100%;
 }
 
 .inner-comment-container {
@@ -53,4 +54,8 @@
     margin: 1em;
     padding-bottom: 1em;
     text-align: center;
+}
+
+.comment-form{
+    width: 100%;
 }

@@ -11,8 +11,10 @@ class User < ApplicationRecord
     return email.split("@")[0].capitalize
   end
 
-  private
+
+
   def comment_created
+    # This is the same thing as num_comments += 1
     self.number_of_comments = number_of_comments + 1
     save
     number_of_comments

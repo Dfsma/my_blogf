@@ -9,6 +9,7 @@ class Comment < ApplicationRecord
 
 
   private
+  
   def set_comment_number
     self.comment_number = user.comment_created
   end
